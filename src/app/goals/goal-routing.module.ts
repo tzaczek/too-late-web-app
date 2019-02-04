@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { GoalItemComponent } from "./goal-item/goal-item.component";
 
 const goalsRoutes : Routes = [
-  {path: 'goal', component: GoalItemComponent}
+  {path: 'goal/:id', component: GoalItemComponent}
 ];
 
 @NgModule({

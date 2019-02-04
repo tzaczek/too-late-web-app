@@ -1,2 +1,5 @@
-<h2>Goal: {{ goal.name }}</h2>
-<p>Description: {{ goal.description }}</p>
+<h1>My goal</h1>
+<div *ngIf="goal$ | async as goal">
+    <h2>Goal: {{ goal.name }}</h2>
+    <p>Description: {{ goal.description }}</p>
+</div>
