@@ -12,7 +12,7 @@ export class LibraryService {
 
   constructor() { }
 
-  getLibrarias(){
+  getLibrarias(): Observable<Library[]>{
     return of(LIBRARIAS);
   }
 
