@@ -1,4 +1,4 @@
-import { Library } from '../goal-library/library';
+import { Library } from '../../library/libray-item/library';
 
 export class Goal{
     id : number;

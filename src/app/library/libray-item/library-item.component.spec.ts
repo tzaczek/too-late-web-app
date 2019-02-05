@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GoalLibraryComponent } from './goal-library.component';
+import { GoalLibraryComponent } from './library-item.component';
 
 describe('GoalLibraryComponent', () => {
   let component: GoalLibraryComponent;
