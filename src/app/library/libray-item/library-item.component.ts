@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-libray-item',
-  templateUrl: './libray-item.component.html',
-  styleUrls: ['./libray-item.component.css']
+  templateUrl: './library-item.component.html',
+  styleUrls: ['./library-item.component.css']
 })
-export class GoalLibraryComponent implements OnInit {
+export class LibraryItemComponent implements OnInit {
 
   constructor() { }
 
