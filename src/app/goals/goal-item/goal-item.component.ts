@@ -14,11 +14,12 @@ import { switchMap } from 'rxjs/operators';
 export class GoalItemComponent implements OnInit {
 
   goal$ : Observable<Goal>;
+  goalId : string;
 
   constructor(private route: ActivatedRoute, private goalService : GoalService) { }
 
-  ngOnInit() {
-    this.goal$ = this.route.paramMap.pipe(
-      switchMap((paramMap : ParamMap) => this.goalService.getGoal(paramMap.get('id'))));
+  ngOnInit() {   
+    this.goalId = this.route.snapshot.paramMap.get('id');  
+    this.goal$ =  this.goalService.getGoal(this.goalId);
   }
 }

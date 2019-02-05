@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-libray-item',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./library-item.component.css']
 })
 export class LibraryItemComponent implements OnInit {
+
+  @Input() goalId : number | string;
 
   constructor() { }
 
