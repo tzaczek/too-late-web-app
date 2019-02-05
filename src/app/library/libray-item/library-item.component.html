@@ -1,3 +1,14 @@
-<p>
-  Library Item Component works!
-</p>
+<h2>Goal library</h2>
+<div *ngIf="library$ | async as library">
+<h3>Related Goal Id: {{library.goalId}} and library Id: {{library.id}}</h3>
+<ul class="links">
+  <li *ngFor="let link of library.links">
+    <a href="{{ link }}">{{ link }}</a>
+  </li>
+</ul>
+<ul class="files">
+  <li *ngFor="let file of library.files">
+    <a href="{{ file }}">{{ file }}</a>
+  </li>
+</ul>
+</div>

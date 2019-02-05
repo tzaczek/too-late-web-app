@@ -1,4 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+
+import { Library } from './library';
+import { LibraryService } from '../library.service';
 
 @Component({
   selector: 'app-libray-item',
@@ -8,10 +12,12 @@ import { Component, Input, OnInit } from '@angular/core';
 export class LibraryItemComponent implements OnInit {
 
   @Input() goalId : number | string;
+  library$ : Observable<Library>;
 
-  constructor() { }
+  constructor(private libraryService : LibraryService) { }
 
   ngOnInit() {
+    this.library$ = this.libraryService.getGoalLibray(this.goalId);
   }
 
 }
