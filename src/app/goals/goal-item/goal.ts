@@ -4,5 +4,5 @@ export class Goal{
     id : number;
     name : string;
     description : string;
-    library : Library;
+    library? : Library;
 }
