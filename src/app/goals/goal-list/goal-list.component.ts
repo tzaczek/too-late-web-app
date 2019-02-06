@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+
+import { Goal } from '../goal-item/goal';
+import { GoalService } from '../goal.service';
 
 @Component({
   selector: 'app-goal-list',
@@ -7,9 +11,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GoalListComponent implements OnInit {
 
-  constructor() { }
+  goals$ : Observable<Goal[]>;
+
+  constructor(private goalService : GoalService) { }
 
   ngOnInit() {
+    this.goals$ = this.goalService.getGoals();
   }
 
+  addGoal(name: string){
+    this.goalService.addGoal(name);
+  }
+
+  deleteGoal(id: number | string){
+    this.goalService.deleteGoal(id);
+  }
 }

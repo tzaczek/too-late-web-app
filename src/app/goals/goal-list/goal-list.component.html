@@ -1,3 +1,15 @@
-<p>
-  goal-list works!
-</p>
+<h1>Goal List</h1>
+<ul class="goalList">
+  <li *ngFor="let goal of goals$ | async">
+    <a routerLink="/goal/{{goal.id}}">
+      {{goal.name}}
+    </a>
+      <button (click)="deleteGoal(goal.id)">delete</button>
+  </li>
+</ul>
+<div class="addGoal">
+  <label>Goal name: </label>
+  <input #goalName placeholder="goal name">
+  <button (click)="addGoal(goalName.value)">add</button>
+</div>
+
