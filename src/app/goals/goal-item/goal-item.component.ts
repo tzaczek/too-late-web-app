@@ -21,5 +21,8 @@ export class GoalItemComponent implements OnInit {
   ngOnInit() {   
     this.goalId = this.route.snapshot.paramMap.get('id');  
     this.goal$ =  this.goalService.getGoal(this.goalId);
+
+    this.goalService.addGoal("dasdasd");
+    this.goalService.deleteGoal(1);
   }
 }

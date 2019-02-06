@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { GoalRoutingModule } from './goal-routing.module';
 import { LibraryModule } from '../library/library.module'
 import { GoalItemComponent } from './goal-item/goal-item.component';
+import { GoalListComponent } from './goal-list/goal-list.component';
 
 
 @NgModule({
   declarations: [
-    GoalItemComponent
+    GoalItemComponent,
+    GoalListComponent
   ],
   imports: [
     CommonModule,
