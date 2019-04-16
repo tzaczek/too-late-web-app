@@ -4,17 +4,17 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { GoalModule } from './goals/goal.module';
-import { NoteComponent } from './note/note.component';
+import { NoteModule } from './note/note-module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NoteComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    GoalModule
+    GoalModule,
+    NoteModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
