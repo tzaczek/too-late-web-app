@@ -5,7 +5,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { NoteComponent } from "./note.component";
 
 const notesRoutes : Routes = [
-  {path: 'note', component: NoteComponent}
+  {
+    path: 'note/:id', component: NoteComponent
+  }
 ];
 
 @NgModule({
